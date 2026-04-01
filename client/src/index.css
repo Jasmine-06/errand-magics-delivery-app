@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 96%);
+  --foreground: hsl(222 47% 11%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(222 47% 11%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(222 47% 11%);
+  --primary: hsl(14 100% 60%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(207 90% 54%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(214 32% 91%);
+  --muted-foreground: hsl(215 16% 47%);
+  --accent: hsl(210 40% 98%);
+  --accent-foreground: hsl(222 47% 11%);
+  --destructive: hsl(0 85% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --success: hsl(122 39% 49%);
+  --warning: hsl(45 100% 51%);
+  --border: hsl(214 32% 91%);
+  --input: hsl(214 32% 91%);
+  --ring: hsl(14 100% 60%);
+  --chart-1: hsl(14 100% 60%);
+  --chart-2: hsl(122 39% 49%);
+  --chart-3: hsl(45 100% 51%);
+  --chart-4: hsl(207 90% 54%);
+  --chart-5: hsl(262 83% 58%);
+  --sidebar: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(222 47% 11%);
+  --sidebar-primary: hsl(14 100% 60%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(210 40% 98%);
+  --sidebar-accent-foreground: hsl(222 47% 11%);
+  --sidebar-border: hsl(214 32% 91%);
+  --sidebar-ring: hsl(14 100% 60%);
+  --font-sans: "Open Sans", sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: "Fira Code", monospace;
+  --radius: 8px;
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.1), 0px 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.1), 0px 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow-md: 0px 4px 6px -1px hsl(0 0% 0% / 0.1), 0px 2px 4px -2px hsl(0 0% 0% / 0.1);
+  --shadow-lg: 0px 10px 15px -3px hsl(0 0% 0% / 0.1), 0px 4px 6px -4px hsl(0 0% 0% / 0.1);
+  --shadow-xl: 0px 20px 25px -5px hsl(0 0% 0% / 0.1), 0px 8px 10px -6px hsl(0 0% 0% / 0.1);
+  --shadow-2xl: 0px 25px 50px -12px hsl(0 0% 0% / 0.25);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: hsl(224 71% 4%);
+  --foreground: hsl(213 31% 91%);
+  --card: hsl(224 71% 4%);
+  --card-foreground: hsl(213 31% 91%);
+  --popover: hsl(224 71% 4%);
+  --popover-foreground: hsl(213 31% 91%);
+  --primary: hsl(14 100% 60%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(207 90% 54%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(223 47% 11%);
+  --muted-foreground: hsl(215 16% 57%);
+  --accent: hsl(216 34% 17%);
+  --accent-foreground: hsl(210 40% 98%);
+  --destructive: hsl(0 63% 31%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --success: hsl(122 39% 49%);
+  --warning: hsl(45 100% 51%);
+  --border: hsl(216 34% 17%);
+  --input: hsl(216 34% 17%);
+  --ring: hsl(14 100% 60%);
+  --sidebar: hsl(224 71% 4%);
+  --sidebar-foreground: hsl(213 31% 91%);
+  --sidebar-primary: hsl(14 100% 60%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(216 34% 17%);
+  --sidebar-accent-foreground: hsl(210 40% 98%);
+  --sidebar-border: hsl(216 34% 17%);
+  --sidebar-ring: hsl(14 100% 60%);
+}
+
+/* Status-specific colors for order cards */
+.status-new {
+  background-color: hsl(207 90% 54%);
+}
+
+.status-accepted {
+  background-color: hsl(45 100% 51%);
+}
+
+.status-picked {
+  background-color: hsl(262 83% 58%);
+}
+
+.status-delivered {
+  background-color: hsl(122 39% 49%);
+}
+
+/* PWA specific styles */
+.fab-shadow {
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+}
+
+.offline-banner {
+  background: linear-gradient(90deg, hsl(0 85% 60%), hsl(14 100% 60%));
+}
+
+@media (display-mode: standalone) {
+  .pwa-only {
+    display: block;
+  }
+}
+
+.pwa-only {
+  display: none;
+}
+
+/* Animation and transition utilities */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(255, 107, 53, 0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Smooth transitions - respects prefers-reduced-motion */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Utility classes for mobile optimization */
+.touch-friendly {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Animation for loading states */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    /* Prevent zoom on mobile when focusing inputs */
+    font-size: 16px;
+  }
+
+  /* Mobile-first responsive typography */
+  h1 {
+    @apply text-2xl font-bold;
+  }
+
+  h2 {
+    @apply text-xl font-semibold;
+  }
+
+  h3 {
+    @apply text-lg font-semibold;
+  }
+
+  /* Ensure buttons are touch-friendly on mobile */
+  button {
+    @apply touch-friendly;
+  }
+
+  /* Better focus visibility for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2;
+  }
+}
+
+@layer utilities {
+  /* Mobile-specific utilities */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-area-left {
+    padding-left: env(safe-area-inset-left);
+  }
+
+  .safe-area-right {
+    padding-right: env(safe-area-inset-right);
+  }
+}

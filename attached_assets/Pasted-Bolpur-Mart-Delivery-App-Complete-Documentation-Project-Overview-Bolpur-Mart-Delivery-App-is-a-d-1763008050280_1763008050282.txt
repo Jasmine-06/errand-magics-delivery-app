@@ -1,0 +1,288 @@
+Bolpur Mart Delivery App - Complete Documentation
+Project Overview
+Bolpur Mart Delivery App is a delivery management system for the Bolpur Mart food ordering platform. This application enables delivery personnel to receive orders, update delivery status in real-time, collect cash on delivery payments, and manage their delivery workflow efficiently.
+Repository: https://github.com/cehpoint-official/bolpur-mart-delivery-app.git
+System Architecture
+The application follows a client-server architecture with Firebase as the backend service:
+Frontend: React + TypeScript + Vite
+
+
+Backend: Firebase (Firestore, Authentication, Cloud Functions)
+
+
+State Management: Zustand
+
+
+Styling: Tailwind CSS
+
+
+Real-time Updates: Firebase Firestore listeners
+
+
+Data Flow
+text
+Bolpur Mart Admin → Firebase Firestore → Delivery App → Status Updates → Customer App
+                                      ↓
+                                 Cash Collection
+                                      ↓
+                              Payment Verification
+
+
+Technology Stack
+Frontend
+React 18+ - UI library
+
+
+TypeScript - Type safety
+
+
+Vite - Build tool and dev server
+
+
+Tailwind CSS - Utility-first styling
+
+
+Zustand - Lightweight state management
+
+
+Backend & Services
+Firebase Authentication - Delivery personnel authentication
+
+
+Firebase Firestore - Real-time database for orders
+
+
+Firebase Hosting - Deployment platform
+
+
+Firebase Cloud Messaging (Optional) - Push notifications
+
+
+Development Tools
+ESLint - Code linting
+
+
+PostCSS - CSS processing
+
+
+TypeScript Compiler - Type checking
+
+
+
+Project Structure
+text
+bolpur-mart-delivery-app/
+├── client/                          # Frontend application
+│   ├── public/                      # Static assets
+│   ├── src/
+│   │   ├── components/              # Reusable UI components
+│   │   │   ├── OrderCard.tsx
+│   │   │   ├── StatusSelector.tsx
+│   │   │   ├── PaymentModal.tsx
+│   │   │   └── Layout.tsx
+│   │   ├── hooks/                   # Custom React hooks
+│   │   │   ├── useOrders.ts
+│   │   │   ├── useAuth.ts
+│   │   │   └── useDeliveryStatus.ts
+│   │   ├── lib/                     # Core utilities and configurations
+│   │   │   └── auths/
+│   │   │       ├── firebase.ts      # Firebase initialization
+│   │   │       ├── firestore.ts     # Firestore operations
+│   │   │       ├── auth.ts          # Authentication logic
+│   │   │       └── utils.ts         # Helper functions
+│   │   ├── pages/                   # Application pages
+│   │   │   ├── login.tsx            # Delivery login
+│   │   │   ├── dashboard.tsx        # Active orders
+│   │   │   ├── history.tsx          # Completed deliveries
+│   │   │   ├── profile.tsx          # Delivery personnel profile
+│   │   │   ├── not-found.tsx        # 404 page
+│   │   │   └── App.tsx              # Main app component
+│   │   ├── types/                   # TypeScript interfaces
+│   │   │   └── order.types.ts
+│   │   ├── store/                   # Zustand store
+│   │   │   └── deliveryStore.ts
+│   │   ├── index.css                # Global styles
+│   │   └── main.tsx                 # Entry point
+│   └── index.html                   # HTML template
+├── server/                          # Backend logic (migrating to Firebase)
+│   ├── index.ts                     # Express server (to be removed)
+│   ├── routes.ts                    # API routes (migrating to Firebase)
+│   └── storage.ts                   # File storage (moving to Firebase Storage)
+├── shared/                          # Shared schemas and types
+│   └── schema.ts                    # Common data models
+├── .gitignore                       # Git ignore rules
+├── package.json                     # Dependencies
+├── package-lock.json                # Locked dependencies
+├── tailwind.config.ts               # Tailwind configuration
+├── tsconfig.json                    # TypeScript configuration
+├── vite.config.ts                   # Vite configuration
+├── postcss.config.js                # PostCSS configuration
+├── firebase.json                    # Firebase configuration
+├── .firebaserc                      # Firebase project settings
+└── README.md                        # Project documentation
+
+
+Features
+Core Functionality
+1. Order Management
+View assigned orders in real-time
+
+
+Filter orders by status (Pending, Out for Delivery, Delivered)
+
+
+Order details including customer info, items, address, and total amount
+
+
+2. Delivery Status Updates
+Pending: Order assigned to delivery personnel
+
+
+Out for Delivery: Order picked up and in transit
+
+
+Delivered: Successfully delivered to customer
+
+
+Real-time sync across all platforms (Admin, Customer, Delivery)
+
+
+3. Cash on Delivery (COD) Management
+Mark payment received upon delivery
+
+
+Track cash collected per delivery
+
+
+Daily cash collection summary
+
+
+Payment verification workflow
+
+
+4. Authentication
+Secure login for delivery personnel
+
+
+Role-based access (delivery-only access)
+
+
+Session persistence
+
+
+5. Delivery History
+View past deliveries
+
+
+Track earnings and completed orders
+
+
+Performance metrics
+
+
+6. Profile Management
+Update personal information
+
+
+Contact details
+
+
+Availability status
+
+
+
+Setup & Installation
+Prerequisites
+Node.js (v18 or higher)
+
+
+npm or yarn
+
+
+Firebase account
+
+
+Git
+
+
+Installation Steps
+Clone the repository
+
+
+bash
+git clone https://github.com/cehpoint-official/bolpur-mart-delivery-app.git
+cd bolpur-mart-delivery-app
+
+Install dependencies
+
+
+bash
+npm install
+
+
+Future Enhancements
+GPS Tracking - Real-time delivery tracking
+
+
+Route Optimization - Suggest optimal delivery routes
+
+
+Earnings Dashboard - Detailed analytics for delivery personnel
+
+
+Push Notifications - Firebase Cloud Messaging integration
+
+
+Offline Support - PWA with service workers
+
+
+Digital Signatures - Customer signature on delivery
+
+
+Photo Proof - Upload delivery photos
+
+
+
+Developer Notes
+Code Standards
+Use TypeScript for type safety
+
+
+Follow React hooks best practices
+
+
+Implement error boundaries
+
+
+Use async/await for asynchronous operations
+
+
+Maintain consistent naming conventions
+
+
+Testing
+Unit tests for utility functions
+
+
+Integration tests for Firestore operations
+
+
+E2E tests for critical user flows
+
+
+Performance
+Lazy load components
+
+
+Implement pagination for order lists
+
+
+Optimize Firestore queries with indexes
+
+
+Use React.memo for expensive renders
+
+
+
+
+
