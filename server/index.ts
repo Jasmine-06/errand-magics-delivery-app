@@ -62,6 +62,11 @@ app.use((req, res, next) => {
   // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || "5000", 10);
 
+  if (process.env.VERCEL) {
+    log("Running in Vercel environment - delegating to Vercel handler");
+    return;
+  }
+
   server.listen(
     {
       port,
@@ -72,3 +77,5 @@ app.use((req, res, next) => {
     }
   );
 })();
+
+export default app;

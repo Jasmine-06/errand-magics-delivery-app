@@ -34,7 +34,7 @@ export default function LoginPage() {
       <Card className="w-full max-w-md shadow-xl border-0 animate-fade-in">
         <CardHeader className="text-center pb-6">
           <div className="mx-auto mb-6">
-            <img src="/errand-magics-logo.png" alt="ErrandMagics Logo" className="h-28 w-auto mx-auto" />
+            <img src="/errand-magics-logo.png" alt="ErrandMagics Logo" className="h-40 w-auto mx-auto" />
           </div>
           <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-orange-600 bg-clip-text text-transparent">
             ErrandMagics

@@ -64,7 +64,7 @@ export default function Signup({ setIsSignup }: { setIsSignup: (value: boolean) 
           </Button>
           
           <div className="mx-auto mb-6">
-            <img src="/errand-magics-logo.png" alt="Errand Magics Logo" className="h-28 w-auto mx-auto" />
+            <img src="/errand-magics-logo.png" alt="Errand Magics Logo" className="h-40 w-auto mx-auto" />
           </div>
           <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-orange-600 bg-clip-text text-transparent">
             Join Errand Magics
