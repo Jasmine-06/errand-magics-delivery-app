@@ -1,6 +1,6 @@
 # Overview
 
-This is a full-stack delivery partner mobile web application for Bolpur Mart, built with React, Express, and TypeScript. The application provides a Progressive Web App (PWA) experience for delivery partners to manage orders, track earnings, and view delivery history. It features real-time order management, offline capabilities, and Firebase integration for authentication and data persistence.
+This is a full-stack delivery partner mobile web application for Errand Magics, built with React, Express, and TypeScript. The application provides a Progressive Web App (PWA) experience for delivery partners to manage orders, track earnings, and view delivery history. It features real-time order management, offline capabilities, and Firebase integration for authentication and data persistence.
 
 # User Preferences
 

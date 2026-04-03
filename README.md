@@ -121,4 +121,4 @@ client/
 
 ---
 
-Made with ❤️ by the Bolpur Mart Team
+Made with ❤️ by the Errand Magics Team

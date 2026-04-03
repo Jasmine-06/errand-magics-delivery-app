@@ -1,6 +1,6 @@
-Bolpur Mart Delivery App - Complete Documentation
+Errand Magics Delivery App - Complete Documentation
 Project Overview
-Bolpur Mart Delivery App is a delivery management system for the Bolpur Mart food ordering platform. This application enables delivery personnel to receive orders, update delivery status in real-time, collect cash on delivery payments, and manage their delivery workflow efficiently.
+Errand Magics Delivery App is a delivery management system for the Errand Magics food ordering platform. This application enables delivery personnel to receive orders, update delivery status in real-time, collect cash on delivery payments, and manage their delivery workflow efficiently.
 Repository: https://github.com/cehpoint-official/bolpur-mart-delivery-app.git
 System Architecture
 The application follows a client-server architecture with Firebase as the backend service:
@@ -21,7 +21,7 @@ Real-time Updates: Firebase Firestore listeners
 
 Data Flow
 text
-Bolpur Mart Admin → Firebase Firestore → Delivery App → Status Updates → Customer App
+Errand Magics Admin → Firebase Firestore → Delivery App → Status Updates → Customer App
                                       ↓
                                  Cash Collection
                                       ↓
