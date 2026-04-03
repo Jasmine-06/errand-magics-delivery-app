@@ -76,15 +76,24 @@ export async function setupVite(app: Express, server: Server) {
 }
 
 export function serveStatic(app: Express) {
-  let distPath = path.resolve(import.meta.dirname, "public");
+  // Use 'dist' as the standard Vite output directory
+  let distPath = path.resolve(import.meta.dirname, "..", "dist");
 
   if (!fs.existsSync(distPath)) {
-    // Try one more common location for Vercel/monorepos
-    const alternativePath = path.resolve(process.cwd(), "dist", "public");
-    if (fs.existsSync(alternativePath)) {
-      distPath = alternativePath;
-    } else if (!process.env.VERCEL) {
-      // Only throw locally, on Vercel we might want to fail gracefully or log
+    // Try other common locations (like current working directory)
+    const alternativePaths = [
+      path.resolve(process.cwd(), "dist"),
+      path.resolve(import.meta.dirname), // Fallback if bundled in dist
+    ];
+    
+    for (const alt of alternativePaths) {
+      if (fs.existsSync(path.resolve(alt, "index.html"))) {
+        distPath = alt;
+        break;
+      }
+    }
+
+    if (!fs.existsSync(distPath) && !process.env.VERCEL) {
       throw new Error(
         `Could not find the build directory: ${distPath}, make sure to build the client first`,
       );
