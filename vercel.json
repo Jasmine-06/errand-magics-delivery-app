@@ -1,12 +1,17 @@
 {
   "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api" }
+    {
+      "source": "/(.*)",
+      "destination": "/api"
+    }
   ],
   "functions": {
     "api/index.ts": {
       "memory": 1024,
-      "maxDuration": 10
+      "maxDuration": 60
     }
   }
 }
