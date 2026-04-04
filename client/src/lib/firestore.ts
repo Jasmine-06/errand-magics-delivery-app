@@ -72,7 +72,7 @@ export const createUserRecord = async (userId: string, data: { name: string, ema
         notifications: true,
         theme: "light",
         language: "en",
-        currency: "INR"
+        currency: "USD"
       }
     });
   } catch (error) {

@@ -4,7 +4,7 @@ import { OrderCard } from "@/components/order-card";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Truck, IndianRupee, Star } from "lucide-react";
+import { Truck, DollarSign, Star } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useEffect, useState } from "react";
 import { useEarnings } from "@/hooks/use-earnings";
@@ -55,7 +55,7 @@ export default function DashboardPage() {
 
         toast({
           title: "🔥 Order Confirmed!",
-          description: `${order.customerAddress} - ₹${totalPrice}`,
+          description: `${order.customerAddress} - $${totalPrice}`,
         });
       });
 
@@ -176,7 +176,7 @@ export default function DashboardPage() {
       refreshEarnings();
       toast({
         title: "Delivered! 🎉",
-        description: `Great job! ₹${amount || 0} has been added to your account.`,
+        description: `Great job! $${amount || 0} has been added to your account.`,
       });
     } catch (error) {
       toast({
@@ -227,11 +227,11 @@ export default function DashboardPage() {
             <div className="bg-white/15 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                  <IndianRupee className="w-4 h-4" />
+                  <DollarSign className="w-4 h-4" />
                 </div>
                 <p className="text-xs opacity-90 font-medium">Earned Today</p>
               </div>
-              <p className="text-3xl font-bold tracking-tight">₹{todayEarnings}</p>
+              <p className="text-3xl font-bold tracking-tight">${todayEarnings}</p>
             </div>
             <div className="bg-white/15 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all">
               <div className="flex items-center gap-2 mb-2">

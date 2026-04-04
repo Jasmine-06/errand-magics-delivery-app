@@ -6,7 +6,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { useAuth } from "@/hooks/use-auth";
 import { useOrders } from "@/hooks/use-orders";
 import { getEarnings } from "@/lib/firestore";
-import { Star, IndianRupee, Truck, TrendingUp } from "lucide-react";
+import { Star, DollarSign, Truck, TrendingUp } from "lucide-react";
 import type { Earnings } from "@shared/schema";
 
 type FilterPeriod = "today" | "week" | "month";
@@ -95,7 +95,7 @@ export default function History() {
   });
 
   const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('en-IN', {
+    return date.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit'
     });
@@ -140,7 +140,7 @@ export default function History() {
           <div className="grid grid-cols-3 gap-3">
             <div className="text-center bg-white/15 backdrop-blur-md rounded-xl p-4 border border-white/20">
               <p className="text-3xl font-bold mb-1" data-testid="text-total-earnings">
-                ₹{totalEarnings}
+                ${totalEarnings}
               </p>
               <p className="text-xs opacity-90 font-medium">Earned</p>
             </div>
@@ -234,7 +234,7 @@ export default function History() {
                   </div>
                   <div className="text-right">
                     <p className="font-semibold text-success" data-testid={`text-earnings-${order.id}`}>
-                      ₹{order.deliveryFee}
+                      ${order.deliveryFee}
                     </p>
                     {order.customerRating && (
                       <div className="flex items-center space-x-1">

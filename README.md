@@ -10,7 +10,7 @@ A modern, high-performance Progressive Web App (PWA) built for delivery partners
 - **📱 User-Friendly Dashboard**: Clean interface to view active, pending, and completed orders.
 - **🗺️ Live Map Navigation**: Integrated Leaflet maps with OpenStreetMap to show specific pickup (Store) and delivery (Customer) locations relative to the partner.
 - **📍 Real-Time Tracking**: Uses device GPS to calculate dynamic distances ("Lene Jao" & "Dene Jayo") and update routes.
-- **💰 Dynamic Earnings**: Automatically calculates delivery fees based on distance (₹20 Base + ₹12/km).
+- **💰 Dynamic Earnings**: Automatically calculates delivery fees based on distance ($20 Base + $12/km).
 - **💸 Earnings Tracker**: View "Aaj Kamaya" (Today's Earnings) instantly updated after every delivery.
 - **🔔 Smart Notifications**: Real-time alerts for new orders.
 - **🛠️ Offline Ready**: PWA support allows installation on mobile devices for a native app-like experience.

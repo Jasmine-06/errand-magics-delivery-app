@@ -32,7 +32,7 @@ function deg2rad(deg: number): number {
 
 /**
  * Suggests a delivery fee based on total distance.
- * Logic: ₹20 base fee + ₹10 per km
+ * Logic: $20 base fee + $12 per km
  */
 export function calculateSuggestedFee(totalDistance: number): number {
     const baseFee = 20;

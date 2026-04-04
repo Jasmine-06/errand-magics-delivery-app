@@ -204,7 +204,7 @@ export function OrderCard({
               <div>
                 <p className="text-xs text-muted-foreground mb-1">Order Value</p>
                 <p className="text-lg font-bold text-foreground">
-                  ₹{totalValue}
+                  ${totalValue}
                 </p>
               </div>
             )}
@@ -212,7 +212,7 @@ export function OrderCard({
             <div>
               <p className="text-xs text-muted-foreground mb-1">You Earn</p>
               <p className="text-lg font-bold text-green-600 dark:text-green-500">
-                ₹{dynamicFee}
+                ${dynamicFee}
               </p>
             </div>
           </div>
