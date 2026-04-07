@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "bolpur-mart-delivery-app",
+    "site": "errand-magics-delivery-app",
     "public": "dist/public",
     "ignore": [
       "firebase.json",

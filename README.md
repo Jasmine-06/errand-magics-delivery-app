@@ -57,8 +57,8 @@ graph TD
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/bolpur-mart-delivery.git
-   cd bolpur-mart-delivery-app
+   git clone https://github.com/your-username/errand-magics-delivery.git
+   cd errand-magics-delivery-app
    ```
 
 2. **Install dependencies**

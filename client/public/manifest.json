@@ -12,16 +12,22 @@
   "scope": "/",
   "icons": [
     {
-      "src": "/errand-magics-logo.png",
+      "src": "/icons/icon-96x96.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/errand-magics-logo.png",
+      "src": "/icons/icon-96x96.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "shortcuts": [

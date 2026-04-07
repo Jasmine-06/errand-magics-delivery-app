@@ -141,8 +141,8 @@ self.addEventListener('push', (event) => {
     const data = event.data.json();
     const options = {
       body: data.body || 'New delivery order available',
-      icon: '/favicon-192x192.png',
-      badge: '/favicon-192x192.png',
+      icon: '/icons/icon-192x192.png',
+      badge: '/icons/icon-192x192.png',
       image: data.image,
       data: data.data || {},
       tag: data.tag || 'delivery-notification',
