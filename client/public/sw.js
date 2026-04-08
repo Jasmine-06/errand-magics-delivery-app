@@ -308,7 +308,7 @@ async function doBackgroundSync() {
 // IndexedDB helpers for offline data storage
 async function storeData(key, data) {
   return new Promise((resolve, reject) => {
-    const request = indexedDB.open('ErrandDeliveryDB', 1);
+    const request = indexedDB.open('ErrandMagicsDeliveryDB', 1);
 
     request.onerror = () => reject(request.error);
     request.onsuccess = () => {
@@ -332,7 +332,7 @@ async function storeData(key, data) {
 
 async function getStoredData(key) {
   return new Promise((resolve, reject) => {
-    const request = indexedDB.open('ErrandDeliveryDB', 1);
+    const request = indexedDB.open('ErrandMagicsDeliveryDB', 1);
 
     request.onerror = () => reject(request.error);
     request.onsuccess = () => {
@@ -351,7 +351,7 @@ async function getStoredData(key) {
 
 async function clearStoredData(key) {
   return new Promise((resolve, reject) => {
-    const request = indexedDB.open('BolpurDeliveryDB', 1);
+    const request = indexedDB.open('ErrandMagicsDeliveryDB', 1);
 
     request.onerror = () => reject(request.error);
     request.onsuccess = () => {
